@@ -25,6 +25,7 @@ MENU_OPTION = ('NEW GAME 1P',
                'SCORE',
                'EXIT')
 
+
 #W
 WIN_WIDTH = 537
 WIN_HEIGHT = 820
