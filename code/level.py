@@ -6,9 +6,10 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
+
+from code.entityFactory import EntityFactory
 from code.Const import COLOR_WHITE, WIN_HEIGHT
 from code.entity import Entity
-from code.entityFactory import EntityFactory
 
 
 class Level:
@@ -18,6 +19,7 @@ class Level:
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('Level1bg'))
+        self.entity_list.append(EntityFactory.get_entity('Player'))
         self.timeout = 20000  #20 sec
 
     def run(self):
