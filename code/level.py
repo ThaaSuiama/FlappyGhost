@@ -31,7 +31,7 @@ class Level:
 
     def create_pipe_pair(self):
         pipe_height = 500
-        gap_y = random.randint(240, 400)
+        gap_y = random.randint(180, 450)
 
         pipe_top = EntityFactory.get_entity('PipeTop', (WIN_WIDTH, gap_y - pipe_height))
         pipe_bottom = EntityFactory.get_entity('PipeBottom', (WIN_WIDTH, gap_y + PIPE_GAP))
@@ -95,6 +95,7 @@ class Level:
             self.update_score()
 
             if self.check_collision():
+                pygame.mixer_music.stop()
                 return 'GAME OVER'
 
             for ent in self.entity_list:
