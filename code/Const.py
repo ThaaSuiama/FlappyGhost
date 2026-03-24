@@ -14,15 +14,14 @@ ENTITY_SPEED = {
     'Level1bg4': 4,
     'Level1bg5': 5,
     'Level1bg6': 6,
-    'Player': 3,
+    'PipeTop': 3,
+    'PipeBottom': 3,
 }
 
 
 
 #M
-MENU_OPTION = ('NEW GAME 1P',
-               'NEW GAME 2P - COOPERATIVE',
-               'NEW GAME 2P - COMPETITIVE',
+MENU_OPTION = ('NEW GAME',
                'SCORE',
                'EXIT')
 
@@ -31,3 +30,10 @@ MENU_OPTION = ('NEW GAME 1P',
 WIN_WIDTH = 537
 WIN_HEIGHT = 820
 
+PLAYER_X = 90
+PLAYER_START_Y = WIN_HEIGHT // 2
+GRAVITY = 0.5
+JUMP_STRENGTH = -10
+
+PIPE_GAP = 190
+PIPE_SPAWN_TIME = 1400
